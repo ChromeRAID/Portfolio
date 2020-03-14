@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
+    <link type='text/css' rel='stylesheet' href='main.css'>
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="app">
+        <header>
+            <nav id="navigation">
+                <div id="inputNav">
+                    <ul class="links">
+                        <template v-for="r in headings">
+                            <li>{{r.name}}</li>
+                        </template>
+                        <!--<li id="shipmentBtn" disabled>Record Shipments</li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id='content'>
+            <h1>Kesavan Shanmugasundaram</h1>
+            <!--IMG PLCAEHOLDER GO HERE-->
+            <h2>Featured Projects</h2>
+            
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script
+        src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src='vue.js'></script>
 </body>
 </html>
