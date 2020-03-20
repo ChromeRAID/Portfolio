@@ -11,22 +11,29 @@
         <header>
             <nav id="navigation">
                 <div id="inputNav">
-                    <ul class="links">
-                        <template v-for="r in headings">
-                            <li>{{r.name}}</li>
-                        </template>
-                        <!--<li id="shipmentBtn" disabled>Record Shipments</li>-->
+                    <ul id="linksList">
+                        <div id='nameContainer'>
+                            <li><h1>Kesavan Shanmugasundaram</h1></li>
+                            <li><h2>Technical Artist</h2></li>
+                        </div>
+                        <div id='linkContainer'>
+                            <template v-for="r in headings">
+                                <li><a v-bind:href="r.link">{{r.name}}</a></li>
+                            </template>
+                        </div>
                     </ul>
                 </div>
             </nav>
         </header>
         <div id='content'>
-            <h1>Kesavan Shanmugasundaram</h1>
             <!--IMG PLCAEHOLDER GO HERE-->
-            <h2>Featured Projects</h2>
-            
+            <h2>Projects</h2>
+            <div id='imageGrid'>
+                <div class="imgBox" v-for="(p,index) in projects">
+                    <p>{{projects[index].name}}</p>
+                </div>
+            </div>
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
